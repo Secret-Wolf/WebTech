@@ -1,0 +1,37 @@
+@media screen and (orientation: portrait) {
+body {
+    display: grid;
+    grid-template-areas:
+        "area1 area1"
+        "area2 area2"
+        "area3 area5"
+        "area3 area4"
+        "area6 area6";
+    
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 10% 10% 60% 10% 10%;
+}
+
+header {
+    grid-area: area1;
+}
+#mainnav {
+    grid-area: area2;
+}
+#subnav {
+    grid-area: area3;
+}
+main {
+    grid-area: area5;
+}
+aside {
+    grid-area: area4;
+}
+footer {
+    grid-area: area6;
+}
+
+header, nav, main, aside, footer {
+    padding: 5px;  /* Reduziertes Padding */
+}
+}

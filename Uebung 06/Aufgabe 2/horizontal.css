@@ -1,0 +1,43 @@
+@media screen and (orientation: landscape) {
+body {
+    display: grid;
+    border: 2px dotted red;
+
+    grid-template-areas:"area1 area2 area2"
+                        "bereich3 bereich5 bereich4"
+                        "area6 area6 area6";
+
+    grid-template-columns: auto 60% auto;
+    grid-template-rows: auto 80% auto;
+
+ 
+}
+
+body header{
+    grid-area: area1;
+}
+body #mainnav{
+    grid-area: area2;
+}
+
+body #subnav {
+    grid-area: bereich3;
+}
+
+body main{
+    grid-area: bereich5;
+}
+
+body aside{
+    grid-area: bereich4;
+}
+
+body footer{
+    grid-area: area6;
+}
+
+header, nav, main, aside, footer {
+    padding: 5px;  /* Reduziertes Padding */
+}
+
+}
