@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notizenverwaltung</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h1>Meine Notizen</h1>
+    
+    <!-- Formular zum Hinzufügen neuer Notizen -->
+    <section>
+        <h2>Neue Notiz</h2>
+        <div>
+            <label for="titel">Titel:</label>
+            <input type="text" id="titel">
+        </div>
+        <div>
+            <label for="text">Text:</label>
+            <textarea id="text"></textarea>
+        </div>
+        <button id="hinzufuegen">Notiz hinzufügen</button>
+    </section>
+
+    <!-- Tabelle für die Anzeige der Notizen -->
+    <section>
+        <h2>Notizenliste</h2>
+        <table id="notizentabelle">
+            <thead>
+                <tr>
+                    <th>Wichtig</th>
+                    <th>Titel</th>
+                    <th>Text</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Hier werden die Notizen dynamisch eingefügt -->
+            </tbody>
+        </table>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
