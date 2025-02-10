@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Produktkatalog</title>
+    <meta charset="utf-8" />
+    <style>
+        main article { padding: 1em; }
+        .product { background-color: lightgray; }
+    </style>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+        article.featured { background-color: lightyellow; }
+        main article > p { font-size: 14px; }
+        h2 + p { color: darkgray; }
+    </style>
+</head>
+<body>
+    <main>
+        <h1 id="catalog-title">Unsere Produkte</h1>
+        <article class="product featured">
+            <h2>Premium Produkt</h2>
+            <p class="description">Ein hochwertiges Produkt</p>
+            <p class="price">99,99 €</p>
+        </article>
+        <article class="product">
+            <h2>Standard Produkt</h2>
+            <p class="description">Ein normales Produkt</p>
+            <p class="price">49,99 €</p>
+        </article>
+    </main>
+</body>
+</html>

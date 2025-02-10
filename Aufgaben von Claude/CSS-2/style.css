@@ -1,0 +1,32 @@
+#catalog-title {
+  color: darkblue;
+  text-align: center;
+
+  /* geht auch
+  display: flex;
+  justify-content: center;
+*/
+  }
+
+main article.featured{
+    background-color: gold;
+    border: 2px solid darkgoldenrod;
+    border-radius: 25px;
+}
+
+/* + für direkten Nachfolger -> von h2 wird nur das erste nachfolgende p-Element grau*/
+
+.price{
+    font-weight: bold;
+    display: flex;
+    justify-content: right;
+}
+
+main article.featured .price{
+    color: red
+}
+
+main article p.description{
+    font-size: 16px;
+    font-style: italic;
+}
