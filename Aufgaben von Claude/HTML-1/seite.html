@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Coole Seite</h1>
+    </header>
+
+    <form method="POST" action="/order">
+      <fieldset>
+        <legend>Name und Adresse</legend>
+        <label for="email">Email-Adresse: </label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          pattern="[a-z0-9A-Z.-][@][a-z0-9A-Z.-]"
+          required
+        />
+        <br />
+        <label for="lieferadresse">Lieferadresse: </label>
+        <textarea id="lieferadresse" name="lieferadresse"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Zahlungsart</legend>
+        <label for="select">Zahlungsart:</label>
+        <select id="select" name="select">
+          <option value="Kreditkarte">Kreditkarte</option>
+          <option value="PayPal">PayPal</option>
+          <option value="Ueberweisung">Überweisung</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>Newsletter</legend>
+        <label for="checkbox">Newsletter-Anmeldung</label>
+        <input id="newsletter" name="checkbox" type="checkbox" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Versandart</legend>
+        <label for="versandart-standard">Standard: </label>
+        <input id="versandart-standard" name="versandart" type="radio" value="Standard" checked />
+
+        <label for="versandart-express">Express: </label>
+        <input id="versandart-express" name="versandart" type="radio" value="Express" />
+      </fieldset>
+
+      <input type="submit" value="absenden" />
+    </form>
+
+    <footer>
+      ©
+      <a href="./Link-zu-AGBS-oder-so">Cooler AGB Link</a>
+    </footer>
+  </body>
+</html>
