@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notizen-Board</title>
+    <meta charset="utf-8">
+    <style>
+        .board {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            padding: 1rem;
+        }
+        
+        .karte {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 4px;
+        }
+        
+        .karte.dringend {
+            border: 2px solid red;
+        }
+        
+        .karte button {
+            margin-top: 0.5rem;
+        }
+        
+        form {
+            max-width: 400px;
+            margin: 1rem;
+        }
+        
+        form div {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mein Notizen-Board</h1>
+    
+    <!-- Formular zum Hinzufügen neuer Notizen -->
+    <form>
+        <div>
+            <label for="titel">Titel:</label>
+            <input type="text" id="titel" required>
+        </div>
+        <div>
+            <label for="text">Notiz:</label>
+            <textarea id="text" required></textarea>
+        </div>
+        <button type="button" id="hinzufuegen">Notiz hinzufügen</button>
+    </form>
+
+    <!-- Container für die Notiz-Karten -->
+    <div class="board" id="board">
+        <!-- Hier werden die Karten dynamisch eingefügt -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
