@@ -1,0 +1,84 @@
+nav a{
+    color:grey;
+    text-decoration-line: none;
+}
+
+nav a:hover{
+    color:blue;
+}
+
+nav a:active{
+    color:violet;
+}
+
+/*ERKLÄRUNG VON GPT ANSCHAUEN UND REINSCHREIBEN*/
+/*main + article{
+    border: 2px solid blue;
+}
+    */
+
+
+main article:first-child{
+    border: 2px solid blue;
+}
+
+/*Kind Element fragt quasi ob es das erste Element im ELtern Element ist*/
+h2:first-child{
+    font-weight: bold;
+    color: red
+}
+
+article li::marker{
+    color:red
+}
+
+.read-more{
+    text-align: right;
+    font-style: italic;
+}
+
+
+
+/*
+a[href^="http"] -> ^= beginnt
+a[href*="http"] -> *= enthält
+*/
+nav a[href^="#"]::after{
+    content:"↗";
+}
+
+article h2:nth-letter(2){
+    font-size: 2em;
+}
+
+article h2::before{
+    content: "📚";
+}
+
+.date{
+    border-bottom:2px dashed black;
+}
+
+article > p{
+    color:green 
+}
+
+/* Geschwisterselektor = B wird selektiert, wenn es im selben Eltern Element nach A vorkommt*/
+li ~ li{
+    color:aqua
+}
+
+/*
+body main article p:last-child{
+    color:brown
+}
+*/
+
+body main article p:last-of-type {
+    color: brown;
+}
+
+
+p time{
+    font-size: 50px;
+}

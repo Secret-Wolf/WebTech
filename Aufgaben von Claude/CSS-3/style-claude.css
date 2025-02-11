@@ -1,0 +1,83 @@
+/* 1. Navigation Links */
+nav a {
+    color: #666666;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #0066cc;
+}
+
+nav a:visited {
+    color: #660066;
+}
+
+/* 2. Blog Artikel */
+/* Erster Artikel mit blauem Rahmen */
+article.blog-post:first-of-type {
+    border: 2px solid #0066cc;
+}
+
+/* Erstes Element in jedem Artikel fett */
+article.blog-post > *:first-child {
+    font-weight: bold;
+}
+
+/* Rote Aufzählungspunkte für Listen */
+article.blog-post ul {
+    list-style-color: red;
+}
+
+/* "Weiterlesen..." Text rechtsbündig und kursiv */
+.read-more {
+    text-align: right;
+    font-style: italic;
+}
+
+/* 3. Pseudoelemente */
+/* Buch-Emoji vor Artikeltiteln */
+article h2::before {
+    content: "📚";
+    margin-right: 0.5em;
+}
+
+/* Pfeil nach externen Links */
+a[href^="http"]::after {
+    content: "↗";
+    margin-left: 0.2em;
+}
+
+/* Erster Buchstabe größer */
+article.blog-post p:not(.date):first-of-type::first-letter {
+    font-size: 2em;
+}
+
+/* Gestrichelte Linie nach Datum */
+.date::after {
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: 1px dashed #666666;
+    margin-top: 0.5em;
+}
+
+/* 4. Spezielle Selektoren/Kombinatoren */
+/* Direkte p-Elemente in Artikeln */
+article.blog-post > p {
+    line-height: 1.5;
+}
+
+/* li-Elemente die auf andere li-Elemente folgen */
+article li + li {
+    margin-top: 0.5em;
+}
+
+/* Letztes Kind-Element jedes Artikels */
+article.blog-post > *:last-child {
+    margin-bottom: 0;
+}
+
+/* Zeitangaben innerhalb von Paragraphen */
+p time {
+    font-weight: bold;
+}
