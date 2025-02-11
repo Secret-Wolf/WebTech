@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kanban-Board</title>
+    <meta charset="utf-8">
+    <style>
+        .board {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+        }
+        
+        .spalte {
+            flex: 1;
+            min-width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 1rem;
+        }
+        
+        .aufgabe {
+            border: 1px solid #ddd;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            background: white;
+            position: relative;
+        }
+        
+        .aufgabe button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+        }
+
+        .statistik {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            background: #f5f5f5;
+            margin: 1rem;
+        }
+
+        .statistik div {
+            flex: 1;
+            text-align: center;
+        }
+
+        .move-buttons {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kanban-Board</h1>
+    
+    <!-- Formular zum Hinzufügen neuer Aufgaben -->
+    <form>
+        <div>
+            <label for="aufgabe">Neue Aufgabe:</label>
+            <input type="text" id="aufgabe" required>
+            <button type="button" id="hinzufuegen">Hinzufügen</button>
+        </div>
+    </form>
+
+    <!-- Statistik-Bereich -->
+    <div class="statistik">
+        <div>
+            To Do: <span id="todo-count">0</span>
+        </div>
+        <div>
+            In Progress: <span id="progress-count">0</span>
+        </div>
+        <div>
+            Done: <span id="done-count">0</span>
+        </div>
+    </div>
+
+    <!-- Kanban-Board -->
+    <div class="board">
+        <div class="spalte" id="todo">
+            <h2>To Do</h2>
+        </div>
+        <div class="spalte" id="progress">
+            <h2>In Progress</h2>
+        </div>
+        <div class="spalte" id="done">
+            <h2>Done</h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
