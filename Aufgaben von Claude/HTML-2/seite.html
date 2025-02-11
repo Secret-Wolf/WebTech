@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
+  </head>
+  <body>
+    <header>
+      <h1 title="Kasser Webshop">Krasser Webshop</h1>
+    </header>
+    <main>
+      <section>
+        <article>
+          <table>
+            <thead>
+              <th>Artikelnummer</th>
+              <th>Produktname</th>
+              <th>Lagerbestand</th>
+              <th>Preis</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Wilder Artikel</td>
+                <td>15</td>
+                <td>12,50€</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Toller Artikel</td>
+                <td>17</td>
+                <td>17,60€</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Cooler Artikel</td>
+                <td>30</td>
+                <td>19,21€</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th colspan="4">62 Produkte</th>
+              </tr>
+            </tfoot>
+          </table>
+        </article>
+      </section>
+      <section>
+        <form method="post" action="/register">
+          <fieldset>
+            <legend>Nutzerdaten</legend>
+            <label for="username">Benutzername</label>
+            <input
+              id="username"
+              type="text"
+              name="username"
+              pattern="[a-zA-Z]{3}[0-9]{3}"
+            />
+            <br />
+            <label for="password">Passwort</label>
+            <input
+              id="password"
+              type="password"
+              name="password"
+              minlength="8"
+            />
+
+            <label for="profilbild">Profilbild</label>
+            <figure>
+                <img src="img/pasta.jpg" alt="salat" width="50" height="50">
+                <figcaption>Da ham wa den Salat</figcaption>
+            </figure>
+
+          </fieldset>
+          <fieldset>
+            <legend>Newsletter und AGBs</legend>
+            <label for="newsletter">Newsletter</label>
+            <input
+              id="newsletter"
+              type="checkbox"
+              name="newsletter"
+              value="yes"
+              checked
+            />
+
+            <label for="terms">Nutzungsbedingungen</label>
+            <input
+              id="terms"
+              type="checkbox"
+              name="terms"
+              value="accepted"
+              required
+            />
+          </fieldset>
+
+          <!--Bei <input> muss ich mit value einen Wert setzten, der dann auf dem Button steht, und mit in der Body kommt beim abschicken-->
+          <!--Bei <button> kann geöffnet und geschlossen werden, der Text auf dem Button wird zwischen den Elementen gesetzt.-->
+          <button type="submit">Registrieren</button>
+
+          <progress value="75" max="100"></progress>
+        </form>
+      </section>
+    </main>
+    <footer>Ja keine Ahnung Copyright oder so</footer>
+  </body>
+</html>
