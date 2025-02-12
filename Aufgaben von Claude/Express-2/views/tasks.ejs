@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task Manager</title>
+    <style>
+      .task-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .task-item {
+        border: 1px solid #ddd;
+        margin: 10px 0;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .priority-high {
+        border-left: 5px solid red;
+      }
+      .priority-medium {
+        border-left: 5px solid orange;
+      }
+      .priority-low {
+        border-left: 5px solid green;
+      }
+      .completed {
+        background-color: #f8f8f8;
+      }
+      .filter-section {
+        margin: 20px 0;
+        padding: 10px;
+        background-color: #eee;
+      }
+      .stats-section {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="task-container">
+      <!-- 
+        Hier sollen Sie das Template implementieren:
+        1. Filter-Formular
+        2. Statistik-Übersicht
+        3. Liste aller Tasks mit:
+           - Titel und Beschreibung
+           - Prioritäts-Markierung
+           - Status-Toggle
+           - Fälligkeitsdatum
+        4. Button für neue Task-Erstellung
+        -->
+
+      <ul>
+        <!--task ist ein einzelner wert arrys tasks  aus tasks.js-->
+        <% for (task of tasks) {%>
+        <li>
+          <%= task.id%>, <%= task.title%>, <%= task.description%>, <%=
+          task.priority%>, <%= task.completed%>, <%= task.dueDate%>
+        </li>
+        <%} %>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+main > section {
+  border: 1px solid grey;
+  height: 150px;
+  padding: 5px;
+  margin: 5px;
+  overflow: scroll;
+  flex: 0 0 45%;
+}
+
+main > section > h4 {
+  margin-top: 0;
+}
+
+.newscontent,
+p {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 5px;
+}
+
+.newscontent {
+  display: flex;
+}
+
+.newscontent p {
+  flex: 1 1 auto;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 750px) {
+  main > section {
+    flex: 1 1 auto;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  img {
+    display: none;
+  }
+}
