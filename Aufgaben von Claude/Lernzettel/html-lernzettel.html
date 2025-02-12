@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Spickzettel-Beispiel</title>
+    <link rel="stylesheet" href="css-lernzettel.css">
+</head>
+<body>
+    <!-- Grundlegende Seitenstruktur -->
+    <header>
+        <h1>Überschrift Ebene 1</h1>
+        <nav>
+            <a href="#anker1">Link zu Anker 1</a>
+            <a href="https://example.com">Externer Link</a>
+            <a href="mailto:test@test.de">Mail-Link</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Formular mit verschiedenen Eingabeelementen -->
+        <form method="POST" action="/submit">
+            <!-- Fieldset zur Gruppierung -->
+            <fieldset>
+                <legend>Persönliche Daten</legend>
+                
+                <!-- Text-Input mit Pattern (nur Kleinbuchstaben + Zahlen) -->
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" 
+                       pattern="[a-z]{5}[0-9]{1,3}" required>
+                
+                <!-- Password mit Mindestlänge -->
+                <label for="password">Passwort:</label>
+                <input type="password" id="password" name="password" 
+                       minlength="10" required>
+                
+                <!-- Email-Input -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Weitere Angaben</legend>
+                
+                <!-- Datum und Zeit -->
+                <label for="date">Datum:</label>
+                <input type="date" id="date" name="date" 
+                       min="2024-01-01" max="2024-12-31">
+                
+                <!-- Zahlen-Input -->
+                <label for="age">Alter:</label>
+                <input type="number" id="age" name="age" min="18" max="100">
+                
+                <!-- Radio Buttons -->
+                <p>Anrede:</p>
+                <input type="radio" id="herr" name="anrede" value="herr" checked>
+                <label for="herr">Herr</label>
+                <input type="radio" id="frau" name="anrede" value="frau">
+                <label for="frau">Frau</label>
+                
+                <!-- Checkboxen -->
+                <p>Newsletter:</p>
+                <input type="checkbox" id="news" name="news" value="ja">
+                <label for="news">Newsletter abonnieren</label>
+                
+                <!-- Select mit Optionen -->
+                <label for="bereich">Bereich auswählen:</label>
+                <select id="bereich" name="bereich" required>
+                    <option value="">Bitte wählen...</option>
+                    <option value="web">Web</option>
+                    <option value="app">App</option>
+                </select>
+            </fieldset>
+
+            <!-- Submit Button -->
+            <button type="submit">Absenden</button>
+        </form>
+
+        <!-- Tabelle mit thead, tbody, tfoot -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                    <th colspan="2">Header 2+3 zusammengefasst</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">Zelle über 2 Zeilen</td>
+                    <td>Daten 1</td>
+                    <td>Daten 2</td>
+                </tr>
+                <tr>
+                    <td>Daten 3</td>
+                    <td>Daten 4</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Zusammenfassung</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <!-- Bild mit Figure -->
+        <figure>
+            <img src="bild.jpg" alt="Beschreibung" width="300" height="200">
+            <figcaption>Bildunterschrift</figcaption>
+        </figure>
+
+        <!-- Video mit Steuerung -->
+        <video controls width="400">
+            <source src="video.mp4" type="video/mp4">
+            Ihr Browser unterstützt das Video-Element nicht.
+        </video>
+
+        <!-- Ankerpunkt für Navigation -->
+        <section id="anker1">
+            <h2>Bereich mit Anker</h2>
+            <p>Dieser Bereich kann über #anker1 angesprungen werden.</p>
+        </section>
+    </main>
+
+    <footer>
+        <small>&copy; 2024 Beispiel GmbH</small>
+    </footer>
+
+    <script src="JS-lernzettel.js"></script>
+</body>
+</html>
