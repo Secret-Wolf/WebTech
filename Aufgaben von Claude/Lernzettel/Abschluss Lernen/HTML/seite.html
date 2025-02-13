@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rezept Portal</title>
+</head>
+
+<body>
+    <header title="Mein Kochbuch">Mein Kochbuch</header>
+    <nav>
+        <a href="/start">Start</a>
+        <a href="/rezepte">Rezepte</a>
+        <a href="/kontakt">Kontakt</a>
+    </nav>
+    <main>
+        <form>
+            <fieldset>
+                <legend>Nutzerdaten</legend>
+                <label for="username">Username:</label>
+                <input id="username" name="username" type="text" pattern="[a-zA-z]{4}[0-9]{3}" />
+                <br />
+                <label for="email">E-Mail:</label>
+                <input id="email" name="email" type="email" required />
+            </fieldset>
+
+            <fieldset>
+                <legend>Newsletter</legend>
+                <label for="newsletter">Newsletter: </label>
+                <input id="newsletter" name="newsletter" value="yes" type="checkbox" />
+                <label for="terms">Nutzungsbedingungen: </label>
+                <input id="terms" name="terms" value="accepted" type="checkbox" required />
+            </fieldset>
+
+            <label for="kochTyp">Koch-Typ</label>
+            <select id="kochTyp">
+                <option name="type" value="hobby">Hobby</option>
+                <option name="type" value="profi">Profi</option>
+                <option name="type" value="restaurant">Restaurant</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Rezeptname</th>
+                    <th>Zubereitungszeit</th>
+                    <th>Schwierigkeit</th>
+                    <th>Bewertung</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Nudeln</td>
+                    <td>10min</td>
+                    <td>Hobby</td>
+                    <td>5 Sterne</td>
+                </tr>
+                <tr>
+                    <td>reis</td>
+                    <td>8min</td>
+                    <td>Restaurant</td>
+                    <td>5 Sterne</td>
+                </tr>
+                <tr>
+                    <td>kartoffel</td>
+                    <td>14min</td>
+                    <td>Profi</td>
+                    <td>5 Sterne</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">Rezept der Woche:</td>
+                    <td>Krasses Essen</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="4">Gesamtrezepte: 4</th>
+                    </td>
+            </tfoot>
+        </table>
+
+        <section>
+            <h1>Rezept der Woche</h1>
+            <figure>
+                <img src="bild.jpg" alt="Bild des Rezeptes der Woche" width="20px" hight="50px">
+                <figcaption>Bild des Rezeptes der Woche</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h3>Top 3 Zutaten</h2>
+                <ul>
+                    <li>Reis</li>
+                    <li>Wasser</li>
+                    <li>Topf</li>
+                </ul>
+            <h3>Anleitung</h3>
+                <ol>
+                    <li>Reis waschen</li>
+                    <li>Wasser in Topf</li>
+                    <li>Kochen</li>
+                </ol>
+        </section>
+
+
+
+
+    </main>
+    <footer>
+        <p>(©)</p>
+        <a href="/agbs">AGBs</a>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+/*th {
+    color: red;
+}
+
+
+
+section h2{
+    color: orange;
+}
+
+section p:nth-child(3){
+    background-color: yellow;
+}*/
+
+
+/* Hauptüberschrift (h2 außerhalb von section) */
+h2:first-of-type {
+    font-size: 2em;
+  }
+  
+  /* Alle section h2 (Sektionsüberschriften) */ 
+  section h2 {
+    color: orange;
+    font-size: 1.5em;
+  }
+  
+  /* Absätze direkt nach einer section h2 */
+  section h2 + p {
+    font-weight: normal;
+  }
+  
+  /* Alle anderen Absätze in sections */
+  section p:not(h2 + p) {
+    background-color: yellow;
+  }
+  
+  /* Absätze außerhalb von sections */
+  body > p {
+    background-color: yellow;
+  }
+  
+  /* Tabellenzellen */
+  td, th {
+    padding: 5px;
+  }
+  
+  /* Jede gerade Tabellenzeile bekommt hellblauen Hintergrund */
+  tr:nth-child(even) td {
+    background-color: lightblue;
+  }
